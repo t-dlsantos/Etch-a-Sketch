@@ -14,9 +14,17 @@ function createGrid(width) {
         container.appendChild(div);
 
         div.addEventListener('mouseover', () => {
-            div.style.backgroundColor = 'blue';
+            div.style.backgroundColor = randomColor();
         });
     }
+}
+
+function randomColor() {
+    const randomR = Math.floor(Math.random() * 256);
+    const randomG = Math.floor(Math.random() * 256);
+    const randomB = Math.floor(Math.random() * 256);
+
+    return `rgb(${randomR},${randomG},${randomB})`;
 }
 
 function initilizate() {
